@@ -14,8 +14,12 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'pry'
   gem 'spring'
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
 end
 
 group :production do
