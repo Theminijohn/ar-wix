@@ -4,26 +4,25 @@
     <link type="text/css" href="/css/rss.widget.css" rel="stylesheet">
     <link type="text/css" href="/external_modules/scrollbar/css/jquery.tinyscrollbar.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <meta http-equiv="X-Frame-Options" content="GOFORIT">
 </head>
 <body>
 
-<div class="widget-body">
-    <div class="widget-header">
-        <div class="main-title" id="feedTitle"></div>
-    </div>
-    <div class="overview">
-        <div class="feed-container" id="feedEntries"></div>
-    </div>
-</div>
-
-<script id="feed" type="text/x-handlebars-template">
-    <a class="entry-link" href="{{link}}" target="_blank">
-        <div class="feed">
-            <div class="title">{{title}}</div>
-            <div class="content"><p>{{content}}</p></div>
-        </div>
-    </a>
+<div id="iframe_wrapper" class="ar-int--style" style="padding-top: 40px;">
+<script src="https://arstaging2.herokuapp.com/assets/integration.js"></script>
+<script>
+  (function(){
+    window.anyroad = new AnyRoad({
+      container: "#iframe_wrapper",
+      tours: { city: "sf" },
+      tourist: {
+        firstname: "George",
+        lastname: "Costanza",
+        phone: "(415) 575-4949",
+        email: "george.costanza@funny.com"
+      },
+      referrer: { name: "marketo" }
+    });
+  })();
 </script>
 
 <script type="text/javascript">
