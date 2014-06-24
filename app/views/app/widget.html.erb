@@ -7,24 +7,23 @@
 </head>
 <body>
 
-<div id="iframe_wrapper" class="ar-int--style" style="padding-top: 40px;">
-<script src="https://arstaging2.herokuapp.com/assets/integration.js"></script>
-<script>
-  (function(){
-    window.anyroad = new AnyRoad({
-      container: "#iframe_wrapper",
-      iframe_style: {width: '940px', background: rgb(208, 229, 222)’ },
-      tours: { city: "sf" },
-      tourist: {
-        firstname: "George",
-        lastname: "Costanza",
-        phone: "(415) 575-4949",
-        email: "george.costanza@funny.com"
-      },
-      referrer: { name: "marketo" }
-    });
-  })();
-</script>
+  <div id="iframe_wrapper">
+  </div>
+  <script src="http://www.anyroad.com/assets/integration.js"></script>
+  <script>
+    (function(){
+      window.anyroad = new AnyRoad( {
+        container: "#iframe_wrapper",
+        iframe_style: {width: '100%'},
+        tours: { guide: "garvanr" },
+        view: 'website',
+        referrer: {
+          name: "garvanr",
+          token: "garvanDr4"
+        }
+      })
+    })()
+  </script>
 
 <script type="text/javascript">
     var newSettings = <%= @settings %>;
